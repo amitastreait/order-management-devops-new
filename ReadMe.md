@@ -23,3 +23,14 @@ create a new branch
     - git switch -c <branchname>, git switch -c <branchname> <source-branch>
 
 ### 
+User Story / Feature - feature/US-88934-Add-To-Cart-Functionality, feature/US-88934
+Bugs - bugfix/BUG-3442-Fix-Order-Page
+Hotfixes - hotfix/adding-columns-to-reports
+Release - release/feature-name-DDMMYYY
+
+### connect local repo with remote repo
+
+git remote add origin https://github.com/amitastreait/order-management-devops-new.git 
+
+git push origin <branch-name>
+    local master/main --> remote master/main
