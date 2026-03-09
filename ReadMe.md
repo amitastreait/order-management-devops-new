@@ -18,4 +18,8 @@ create a new branch
     Step2 - switch to the branch - git checkout <branchname>
     Step1 + Step 2 - git checkout -b <branch-name>, git checkout -b <branch-name> <source-branch>
 
+### Moder Way of creating branches
+    - git swtich <branchname>
+    - git switch -c <branchname>, git switch -c <branchname> <source-branch>
+
 ### 
