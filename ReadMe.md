@@ -139,3 +139,115 @@ git add .
 git commit -m "feat: Added Cart functionality"
 
 git push origin feature/cart
+
+
+Here is a separate Markdown file you can use specifically for Git Cherry-Pick documentation.
+
+File Name
+
+git-cherry-pick.md
+
+# Git Cherry-Pick Guide
+
+## What is Git Cherry-Pick?
+
+`git cherry-pick` allows you to **apply a specific commit from one branch to another branch**.
+
+It is useful when you want to **move only a particular fix or feature** without merging the entire branch.
+
+---
+
+# Basic Syntax
+
+```bash
+git cherry-pick <commit-hash>
+
+Example:
+
+git cherry-pick a1b2c3d
+
+This will apply the changes from commit a1b2c3d to the current branch.
+
+⸻
+
+Example Scenario
+
+Suppose you fixed a bug in the develop branch but want the same fix in main.
+
+Step 1 – Switch to target branch
+
+git switch main
+
+Step 2 – Cherry-pick the commit
+
+git cherry-pick <commit-hash>
+
+Example:
+
+git cherry-pick 9f8d7a2
+
+Now the commit from develop will also exist in main.
+
+⸻
+
+Cherry Pick Multiple Commits
+
+git cherry-pick <commit1> <commit2> <commit3>
+
+Example:
+
+git cherry-pick a1b2c3 d4e5f6 g7h8i9
+
+
+⸻
+
+Cherry Pick a Range of Commits
+
+git cherry-pick <start-commit>..<end-commit>
+
+Example:
+
+git cherry-pick a1b2c3..d4e5f6
+
+
+⸻
+
+Handling Merge Conflicts
+
+If a conflict occurs during cherry-pick:
+
+Resolve conflicts manually
+
+Then run:
+
+git add .
+git cherry-pick --continue
+
+
+⸻
+
+Abort Cherry Pick
+
+If you want to cancel the cherry-pick operation:
+
+git cherry-pick --abort
+
+
+⸻
+
+Best Use Cases
+
+Cherry-pick is commonly used for:
+	•	Applying hotfixes to production branches
+	•	Copying specific commits without merging full branches
+	•	Moving small bug fixes between branches
+
+⸻
+
+Example Workflow
+
+git switch main
+git cherry-pick 5a3c9b1
+git push origin main
+
+This applies the commit from another branch into main.
