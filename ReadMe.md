@@ -7,13 +7,9 @@ A commit message should clearly describe **what change was made and why**.
 ### Basic Commit
 ```bash
 git commit -m "Modified the Signup functionality"
-
 Amend the Last Commit Message
-
 Use this when you want to modify the previous commit message.
-
 git commit --amend -m "Modified the Login & Signup functionality"
-
 ```
 
 ### Standard Commit Message Types (Conventional Commits)
